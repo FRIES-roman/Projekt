@@ -4,7 +4,7 @@ const componentsData = [
         title: "Procesor (CPU)",
         excelName: "Intel Core i3-12100",
         price: "2 960 Kč",
-        img: "",
+        img: "../image/procesor.jpg",
         definition: "Procesor je 'mozková centrála' celého počítače. Vykonává veškeré výpočty, spouští programy a řídí chod celého systému.",
         reason: "Intel Core i3-12100 nabízí extrémní výkon na jedno jádro v poměru k nízké ceně. Pro kancelář, tabulky a web je naprosto adekvátní a nebudete přoplácet za zbytečně drahá i5 nebo i7 řešení."
     },
@@ -20,7 +20,7 @@ const componentsData = [
         title: "Operační Paměť (RAM)",
         excelName: "Kingston FURY Beast Black 16GB",
         price: "3 489 Kč",
-        img: "",
+        img: "../image/operacni_pamet.jpg",
         definition: "RAM slouží jako krátkodobé úložiště pro právě otevřené programy, dokumenty a záložky v prohlížeči.",
         reason: "16 GB RAM je dnes naprostý základ pro plynulý chod bez zasekávání. Značka Kingston patří mezi nejspolehlivější výrobce na trhu s minimální úmrtností pamětí."
     },
@@ -59,15 +59,15 @@ const componentsData = [
     {
         title: "Klávesnice",
         excelName: "HP 230 CZ/SK",
-        price: "V setu / 0 Kč",
-        img: "",
+        price: "749 Kč",
+        img: "../image/klavesnice.jpg",
         definition: "Základní vstupní zařízení pro psaní textu a zadávání příkazů.",
         reason: "HP 230 nabízí nízkoprofilové tiché klávesy s nízkým zdvihem (podobně jako u notebooku) a českou lokalizaci, což zajišťuje rychlé a pohodlné psaní bez únavy prstů."
     },
     {
         title: "Myš",
         excelName: "HP Z3700 Dual",
-        price: "V setu / 0 Kč",
+        price: "499 Kč",
         img: "",
         definition: "Vstupní zařízení k ovládání kurzoru na obrazovce.",
         reason: "Kompaktní, velmi přesná optická myš HP Z3700 s nízkým profilem a dlouhou výdrží baterie, vhodná pro celodenní práci na jakémkoliv stolu."
@@ -75,7 +75,7 @@ const componentsData = [
     {
         title: "Kabeláž a Napájení",
         excelName: "Sada napájecích a datových kabelů",
-        price: "V balení (0 Kč)",
+        price: "0 Kč",
         img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80",
         definition: "Napájecí kabely (230V do zásuvky) a datové propojovací kabely (HDMI pro obraz, USB pro periférie).",
         reason: "Všechny potřebné kabely (HDMI k monitoru, 230V do skříně i kabely pro myš/klávesnici) jsou již přímo přibaleny u jednotlivých komponent a monitoru. Není nutné připlácet ani korunu navíc."
