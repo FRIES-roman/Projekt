@@ -65,7 +65,7 @@ const data = {
   cables: { 
     name: "Propojovací a napájecí kabely", 
     price: "V balení (0 Kč)", 
-    img: "sit.webp", 
+    img: "kabel.webp", 
     purpose: "Napájení a propojení monitoru a periferií s PC.", 
     why: "Všechny potřebné kabely (HDMI, 230V, USB) jsou již součástí balení monitoru a zdroje." 
   }
