@@ -1,133 +1,95 @@
-// Seznam základních pojmů / komponentů
-const componentsData = [
-    {
-        title: "Procesor (CPU)",
-        excelName: "Intel Core i3-12100",
-        price: "2 960 Kč",
-        img: "../image/procesor.jpg",
-        definition: "Procesor je 'mozková centrála' celého počítače. Vykonává veškeré výpočty, spouští programy a řídí chod celého systému.",
-        reason: "Intel Core i3-12100 nabízí extrémní výkon na jedno jádro v poměru k nízké ceně. Pro kancelář, tabulky a web je naprosto adekvátní a nebudete přoplácet za zbytečně drahá i5 nebo i7 řešení."
-    },
-    {
-        title: "Grafická Karta (GPU)",
-        excelName: "Intel UHD Graphics 730",
-        price: "Součást procesoru (0 Kč)",
-        img: "",
-        definition: "Grafická karta se stará o vykreslování obrazu na monitor. Může být buď samostatná (dedikovaná), nebo integrovaná přímo v procesoru.",
-        reason: "Pro běžnou kancelářskou práci (Excel, prohlížeč, 4K videa) je integrovaná grafika Intel UHD 730 nejlepší volbou na trhu. Ušetří cca 3000-5000 Kč za zbytečnou samostatnou kartu a má minimální spotřebu."
-    },
-    {
-        title: "Operační Paměť (RAM)",
-        excelName: "Kingston FURY Beast Black 16GB",
-        price: "3 489 Kč",
-        img: "../image/operacni_pamet.jpg",
-        definition: "RAM slouží jako krátkodobé úložiště pro právě otevřené programy, dokumenty a záložky v prohlížeči.",
-        reason: "16 GB RAM je dnes naprostý základ pro plynulý chod bez zasekávání. Značka Kingston patří mezi nejspolehlivější výrobce na trhu s minimální úmrtností pamětí."
-    },
-    {
-        title: "Pevný Disk (SSD)",
-        excelName: "Verbatim Vi3000 512GB",
-        price: "2 129 Kč",
-        img: "",
-        definition: "Disk slouží jako trvalé úložiště pro operační systém (Windows), aplikace a všechny vaše soubory a dokumenty.",
-        reason: "Jedná se o rychlé rozhraní NVMe PCIe M.2, díky kterému se Windows načte do 10 sekund. Kapacita 512 GB plně dostačuje na tisíce kancelářských dokumentů."
-    },
-    {
-        title: "Síťová Karta",
-        excelName: "TP-Link TG-3468",
-        price: "549 Kč",
-        img: "",
-        definition: "Zajišťuje fyzické připojení počítače k místní síti a internetu pomocí ethernetového kabelu (RJ-45).",
-        reason: "TP-Link TG-3468 je cenově nejdostupnější gigabitová PCIe karta na trhu. Nabízí maximální stabilitu připojení 1000 Mbps bez výpadků."
-    },
-    {
-        title: "Zvuková Karta",
-        excelName: "AlzaPower USB Sound Card 4030",
-        price: "219 Kč",
-        img: "",
-        definition: "Zpracovává zvukový signál a umožňuje připojení reproduktorů, sluchátek nebo mikrofonu.",
-        reason: "Jednoduché USB řešení 'plug-and-play'. Nevyžaduje žádnou instalaci ovladačů a zajistí čistý přenos hlasu při online schůzkách přes Teams či Zoom."
-    },
-    {
-        title: "Monitor",
-        excelName: "Kancelářský Monitor ASUS",
-        price: "9 290 Kč",
-        img: "",
-        definition: "Zobrazovací zařízení pro práci. Pro kancelář je klíčový kvalitní panel šetrný k očím.",
-        reason: "Monitory ASUS v této třídě vynikají ergonomií, kvalitním podáním barev a hlavně šetrností k očím (Flicker-Free a redukce modrého světla při celodenním sledování)."
-    },
-    {
-        title: "Klávesnice",
-        excelName: "HP 230 CZ/SK",
-        price: "749 Kč",
-        img: "../image/klavesnice.jpg",
-        definition: "Základní vstupní zařízení pro psaní textu a zadávání příkazů.",
-        reason: "HP 230 nabízí nízkoprofilové tiché klávesy s nízkým zdvihem (podobně jako u notebooku) a českou lokalizaci, což zajišťuje rychlé a pohodlné psaní bez únavy prstů."
-    },
-    {
-        title: "Myš",
-        excelName: "HP Z3700 Dual",
-        price: "499 Kč",
-        img: "",
-        definition: "Vstupní zařízení k ovládání kurzoru na obrazovce.",
-        reason: "Kompaktní, velmi přesná optická myš HP Z3700 s nízkým profilem a dlouhou výdrží baterie, vhodná pro celodenní práci na jakémkoliv stolu."
-    },
-    {
-        title: "Kabeláž a Napájení",
-        excelName: "Sada napájecích a datových kabelů",
-        price: "0 Kč",
-        img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80",
-        definition: "Napájecí kabely (230V do zásuvky) a datové propojovací kabely (HDMI pro obraz, USB pro periférie).",
-        reason: "Všechny potřebné kabely (HDMI k monitoru, 230V do skříně i kabely pro myš/klávesnici) jsou již přímo přibaleny u jednotlivých komponent a monitoru. Není nutné připlácet ani korunu navíc."
-    }
-];
+const data = {
+  cpu: { 
+    name: "Procesor: Intel Core i3-12100", 
+    price: "2 960 Kč", 
+    img: "procesor.webp", 
+    purpose: "Mozek počítače, který provádí veškeré výpočty a spouští programy.", 
+    why: "Nejlepší poměr cena/výkon pro kancelář. Má vysoký výkon na 1 jádro a integrovanou grafiku UHD 730." 
+  },
+  ram: { 
+    name: "RAM: Kingston FURY Beast 16GB", 
+    price: "3 489 Kč", 
+    img: "operace.webp", 
+    purpose: "Operační paměť pro uchování právě otevřených aplikací a záložek.", 
+    why: "16GB je ideální kapacita pro plynulý chod bez zasekávání. Kingston je nejspolehlivější značka na trhu." 
+  },
+  ssd: { 
+    name: "Disk: Verbatim Vi3000 512GB", 
+    price: "2 129 Kč", 
+    img: "512.webp", 
+    purpose: "Rychlé NVMe SSD úložiště pro operační systém a dokumenty.", 
+    why: "Až 10x rychlejší než staré HDD disky. Windows se načte za pár sekund a 512GB bohatě stačí na dokumenty." 
+  },
+  net: { 
+    name: "Síťová karta: TP-Link TG-3468", 
+    price: "549 Kč", 
+    img: "sit.webp", 
+    purpose: "Zajišťuje připojení PC k internetu pomocí kabelu.", 
+    why: "Nabízí stabilní gigabitové připojení (1000 Mbps) bez výpadků za velmi nízkou cenu." 
+  },
+  sound: { 
+    name: "Zvuková karta: AlzaPower USB 4030", 
+    price: "219 Kč", 
+    img: "zvuk.webp", 
+    purpose: "Zpracovává zvuk pro sluchátka a mikrofon.", 
+    why: "Kompaktní USB řešení bez nutnosti instalace ovladačů. Ideální pro čisté videohovory." 
+  },
+  gpu: { 
+    name: "Grafika: Intel UHD Graphics 730", 
+    price: "V ceně procesoru", 
+    img: "intel.jpg", 
+    purpose: "Zobrazuje obraz na monitoru.", 
+    why: "Integrovaná grafika šetří tisíce korun i energii. Zvládne 4K video i práci na dvou monitorech." 
+  },
+  monitor: { 
+    name: "Monitor: ASUS", 
+    price: "9 290 Kč", 
+    img: "monitor.webp", 
+    purpose: "Displej pro zobrazení pracovní plochy.", 
+    why: "Špičkový obraz šetrný k očím díky technologii Flicker-Free a redukci modrého světla." 
+  },
+  keyboard: { 
+    name: "Klávesnice: HP 230 CZ/SK", 
+    price: "749 Kč", 
+    img: "klavesnice.jpg", 
+    purpose: "Vstupní zařízení pro psaní textu a čísel.", 
+    why: "Tiché klávesy s nízkým zdvihem pro pohodlné psaní bez únavy a plné české rozložení." 
+  },
+  mouse: { 
+    name: "Myš: HP Z3700 Dual", 
+    price: "499 Kč", 
+    img: "mys.jpg", 
+    purpose: "Zařízení pro ovládání kurzoru.", 
+    why: "Přesný optický snímač, ergonomický tvar a dlouhá výdrž baterie." 
+  },
+  cables: { 
+    name: "Propojovací a napájecí kabely", 
+    price: "V balení (0 Kč)", 
+    img: "sit.webp", 
+    purpose: "Napájení a propojení monitoru a periferií s PC.", 
+    why: "Všechny potřebné kabely (HDMI, 230V, USB) jsou již součástí balení monitoru a zdroje." 
+  }
+};
 
-// Generování karet do mřížky
-function renderCards() {
-    const grid = document.getElementById('components-grid');
-    grid.innerHTML = '';
-
-    componentsData.forEach((item, index) => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.onclick = () => openModal(index);
-
-        card.innerHTML = `
-            <img src="${item.img}" alt="${item.title}" class="card-img">
-            <h3>${item.title}</h3>
-            <p class="card-subtitle">${item.excelName}</p>
-            <p class="card-price">${item.price}</p>
-        `;
-
-        grid.appendChild(card);
-    });
+// Generování mřížky produktů vedle sebe
+const gridEl = document.getElementById('grid');
+if (gridEl) {
+  Object.keys(data).forEach(key => {
+    gridEl.innerHTML += `
+      <a href="detail.html?id=${key}" class="product-card">
+        <div class="product-title">${data[key].name}</div>
+        <div class="product-price">${data[key].price}</div>
+      </a>`;
+  });
 }
 
-// Otevření okna s detailem
-function openModal(index) {
-    const item = componentsData[index];
-    document.getElementById('modal-img').src = item.img;
-    document.getElementById('modal-title').innerText = item.title;
-    document.getElementById('modal-excel-name').innerText = item.excelName;
-    document.getElementById('modal-price').innerText = item.price;
-    document.getElementById('modal-definition').innerText = item.definition;
-    document.getElementById('modal-reason').innerText = item.reason;
-
-    document.getElementById('modal').classList.remove('hidden');
+// Zobrazení detailu na detail.html
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+if (id && data[id]) {
+  document.getElementById('title').innerText = data[id].name;
+  document.getElementById('price').innerText = data[id].price;
+  document.getElementById('img').src = data[id].img;
+  document.getElementById('purpose').innerText = data[id].purpose;
+  document.getElementById('why').innerText = data[id].why;
 }
-
-// Zavření okna
-function closeModal() {
-    document.getElementById('modal').classList.add('hidden');
-}
-
-// Zavření kliknutím mimo okno
-window.onclick = function(event) {
-    const modal = document.getElementById('modal');
-    if (event.target === modal) {
-        closeModal();
-    }
-}
-
-// Inicializace
-document.addEventListener('DOMContentLoaded', renderCards);
