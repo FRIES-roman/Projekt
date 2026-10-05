@@ -2,16 +2,36 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
-  <title>Kancelářské PC</title>
+  <title>Kancelářské PC - Náhodné složky</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Kancelářská PC Sestava</h1>
-    <p>Klikněte na produkt pro zobrazení detailu, fotky a důvodu výběru:</p>
-    <div class="product-grid" id="grid"></div>
-    <div class="total">Celková cena: <strong>19 884 Kč</strong></div>
+
+  <!-- Plocha pro náhodné složky -->
+  <div class="desktop" id="desktop"></div>
+
+  <!-- Vyskakovací okno s detailem složky -->
+  <div class="window" id="window">
+    <div class="window-header">
+      <span id="win-title">Detail složky</span>
+      <button class="close-btn" onclick="closeWindow()">✕</button>
+    </div>
+    <div class="window-body">
+      <div class="window-price" id="win-price"></div>
+      <img id="win-img" src="" alt="Komponent">
+      <h3 style="margin-top:10px;">K čemu slouží?</h3>
+      <p id="win-purpose" style="margin-bottom: 15px;"></p>
+      <h3>Proč je tento výrobek nejlepší?</h3>
+      <p id="win-why"></p>
+    </div>
   </div>
+
+  <!-- Spodní lišta PC -->
+  <div class="taskbar">
+    <div class="start-btn">💻 Kancelářská Sestava (Celkem: 23 774 Kč)</div>
+    <div id="clock">12:00</div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
