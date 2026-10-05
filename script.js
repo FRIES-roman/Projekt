@@ -20,19 +20,19 @@ const data = {
     purpose: "Rychlé NVMe SSD úložiště pro operační systém a dokumenty.", 
     why: "Až 10x rychlejší než staré HDD disky. Windows se načte za pár sekund a 512GB bohatě stačí na dokumenty." 
   },
-  net: { 
-    name: "Síťová karta: TP-Link TG-3468", 
-    price: "549 Kč", 
-    img: "sit.webp", 
-    purpose: "Zajišťuje připojení PC k internetu pomocí kabelu.", 
-    why: "Nabízí stabilní gigabitové připojení (1000 Mbps) bez výpadků za velmi nízkou cenu." 
+  board: {
+    name: "Skříň: Gamemax Silent HILL / H606", // Přidány uvozovky
+    price: "859 Kč", // Přidány uvozovky
+    img: "skrin.webp",
+    purpose: "Skříň pro umístění všech komponent a jejich chlazení.",
+    why: "Tichá skříň s dostatkem prostoru pro komponenty a dobrým prouděním vzduchu. Snadná montáž."
   },
-  sound: { 
-    name: "Zvuková karta: AlzaPower USB 4030", 
-    price: "219 Kč", 
-    img: "zvuk.webp", 
-    purpose: "Zpracovává zvuk pro sluchátka a mikrofon.", 
-    why: "Kompaktní USB řešení bez nutnosti instalace ovladačů. Ideální pro čisté videohovory." 
+  source: {
+    name: "Zdroj: Corsair RM850x ATX 3.1", // Přidány uvozovky
+    price: "3 799 Kč", // Přidány uvozovky
+    img: "zdroj.webp",
+    purpose: "Zdroj pro napájení všech komponent.",
+    why: "Kvalitní zdroj s vysokou účinností a tichým chodem. Poskytuje dostatek energie pro všechny komponenty a budoucí rozšíření." 
   },
   gpu: { 
     name: "Grafika: Intel UHD Graphics 730", 
